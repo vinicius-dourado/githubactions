@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: check docker pull
-        run: docker pull ${{ inputs.image }}-${{ inputs.version }}
+        run: docker pull ${{ inputs.image }}:${{ inputs.version }}
       - name: docker build up 
         run: docker build up
       - name: docker images
