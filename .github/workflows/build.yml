@@ -18,8 +18,6 @@ jobs:
     steps:
       - name: check docker pull
         run: docker pull ${{ inputs.image }}:${{ inputs.version }}
-      - name: docker build up 
-        run: docker build up
       - name: docker images
         run: docker images       
 
