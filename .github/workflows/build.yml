@@ -20,12 +20,11 @@ jobs:
         run: docker pull ${{ inputs.image }}:${{ inputs.version }}
       - name: docker images
         run: docker images
-      - name: docwnload docker scout
-        run: curl -fsSL https://raw.githubusercontent.com/docker/scout-cli/main/install.sh -o install-scout.sh
-      - name: install scout
-        run: sh install-scout.sh
-      - name: run scout
-        run: docker scout quickview ${{ inputs.image }}:${{ inputs.version }}     
+      - name: Docker Scout
+        uses: docker/scout-action@v1
+        with:
+          command: quickview
+          image: ${{ inputs.image }}:${{ inputs.version }}
 
 #  githubaction
 
