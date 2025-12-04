@@ -9,5 +9,7 @@ jobs:
   githubactions-tcu-01:
     runs-on: ubuntu-latest
     steps:
-      - name: tcu
-        run: echo "vou pro tcu"
+      - name: create-tcu
+        run: echo "vou pro tcu" > file.txt
+      - name: read-tcu
+        run: cat file.txt
