@@ -18,11 +18,13 @@ jobs:
     steps:
       - name: checking directory
         run: ls -lha
-      - uses: actions/upload-artifact@v4
-        with: 
-          name: dumps
-          path: ${{ github.workspace }}/file.txt    
       - name: create-tcu
         run: echo "vou pro tcu" > ${{ github.workspace }}/file.txt
       - name: checking directory again
-        run: ls -lha             
+        run: ls -lha       
+      - uses: actions/upload-artifact@v4
+        with: 
+          name: dumps
+          path: ${{ github.workspace }}/file.txt
+      - name: checking workspace
+        run: ls -lha  ${{ github.workspace }}                
