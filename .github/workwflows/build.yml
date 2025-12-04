@@ -1,0 +1,13 @@
+name: first workflow
+
+on:
+  push:
+    branch:
+      main
+
+jobs:
+  githubactions-tcu-01:
+    runs-on: Ubuntu:latest
+    steps:
+      run: echo "vou pro tcu"
+  
