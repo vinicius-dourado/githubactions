@@ -1,4 +1,4 @@
-name: primeiros passos no github actions
+name: primeiros passos no github actionss
 
 on:
   push:
