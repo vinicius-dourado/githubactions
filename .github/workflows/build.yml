@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: create-tcu
         run: echo "vou pro tcu" > ${{ github.workspace }}/file.txt
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4 #vai apos o arquivo ter sido criado
         with: 
           name: dumps
           path: ${{ github.workspace }}/file.txt
@@ -28,5 +28,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: githubactions-tcu-02
     steps:
-      - name: read-tcu
-        run: echo "vou pro tcu" > ${{ github.workspace }}/file.txt
+      - uses: actions/download-artifact@v4 #vai antes de fazer o download do arquivo
+        with: 
+          name: dumps
+          path: imports
+      - name: Ver o conteudo do diretorio
+        run: ls -lha && ls ./imports/
