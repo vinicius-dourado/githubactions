@@ -1,4 +1,4 @@
-name: primeiros passos no github actionss
+name: primeiros passos no github actions
 
 on:
   push:
@@ -13,4 +13,3 @@ jobs:
         run: echo "vou pro tcu" > file.txt
       - name: read-tcu
         run: cat file.txt
-
