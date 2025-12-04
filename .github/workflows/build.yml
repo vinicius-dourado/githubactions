@@ -10,7 +10,7 @@ on:
 
 jobs:
   githubactions-tcu-01:
-    runs-on: ${{ github.event.inputs.environment }}"
+    runs-on: ${{ inputs.environment }}"
     steps:
       - name: create-tcu
         run: echo "vou pro tcu" > file.txt
@@ -40,4 +40,5 @@ jobs:
       - name: Ver o conteudo do diretorio
         run: ls -lha && ls ./imports/
       - name: Imprimir conteudo do arquivo
+
         run: cat ./imports/file.txt        
