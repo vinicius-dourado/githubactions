@@ -19,7 +19,9 @@ jobs:
       - name: check docker pull
         run: docker pull ${{ inputs.image }}:${{ inputs.version }}
       - name: docker images
-        run: docker images       
+        run: docker images
+      - name: docker scout
+        run: docker scout quickoverview ${{ inputs.image }}:${{ inputs.version }}  
 
 #  githubaction
 
