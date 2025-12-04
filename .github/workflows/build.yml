@@ -34,3 +34,5 @@ jobs:
           path: imports
       - name: Ver o conteudo do diretorio
         run: ls -lha && ls ./imports/
+      - name: Imprimir conteudo do arquivo
+        run: cat ./imports/file.txt        
