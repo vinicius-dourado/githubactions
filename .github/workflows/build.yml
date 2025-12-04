@@ -28,7 +28,7 @@ jobs:
       - name: Docker Scout
         uses: docker/scout-action@v1
         with:
-          command: quickview
+          command: cves
           image: ${{ inputs.image }}:${{ inputs.version }}
 
 #  githubaction
