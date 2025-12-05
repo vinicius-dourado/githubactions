@@ -1,0 +1,15 @@
+name: trigger when a pull request is created, edited or deleted in dev branch
+
+on:
+  pull_request:
+    types: [opened, edited, deleted, reopened]
+    branches:
+      - main
+
+jobs:
+  trigger-pull-request:
+    runs-on: ubuntu-latest
+    steps:
+      - name: triggered
+        run: echo "new pull request was created on dev."
+
