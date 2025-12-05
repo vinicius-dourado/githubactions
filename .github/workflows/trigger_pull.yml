@@ -1,0 +1,12 @@
+name: trigger when a pull request is created, edited or deleted in dev branch
+
+on:
+  pull_request:
+    branches:
+      - dev
+
+job:
+  trigger-pull-request:
+    - name: triggered
+      run: echo "new pull request was created on dev."
+
