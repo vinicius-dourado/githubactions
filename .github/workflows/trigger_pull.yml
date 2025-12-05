@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [opened, edited, deleted, reopened]
     branches:
-      - dev
+      - main
 
 jobs:
   trigger-pull-request:
