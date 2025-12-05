@@ -8,7 +8,8 @@ on:
 
 job:
   trigger-pull-request:
-  runs-on: ubuntu-latest
-    - name: triggered
-      run: echo "new pull request was created on dev."
+    runs-on: ubuntu-latest
+    steps:
+      - name: triggered
+        run: echo "new pull request was created on dev."
 
